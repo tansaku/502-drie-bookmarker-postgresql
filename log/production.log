@@ -6,3 +6,17 @@ D, [2016-10-26T13:18:32.993315 #72078] DEBUG -- :   [1m[35m (100.0ms)[0m  BEG
 D, [2016-10-26T13:18:33.095286 #72078] DEBUG -- :   [1m[36m (100.9ms)[0m  [1mCREATE TABLE "bookmarks" ("id" serial primary key, "name" character varying, "url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
 D, [2016-10-26T13:18:33.572046 #72078] DEBUG -- :   [1m[35mSQL (96.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161026121548"]]
 D, [2016-10-26T13:18:33.668968 #72078] DEBUG -- :   [1m[36m (96.5ms)[0m  [1mCOMMIT[0m
+D, [2016-10-27T18:11:30.495672 #83200] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (129.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2016-10-27T18:12:00.830351 #83212] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (153.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2016-10-27T18:12:01.415693 #83212] DEBUG -- :   [1m[35mActiveRecord::SchemaMigration Load (139.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+I, [2016-10-27T18:12:01.416000 #83212]  INFO -- : Migrating to CreateBookmarks (20161026121548)
+D, [2016-10-27T18:12:01.555668 #83212] DEBUG -- :   [1m[36m (139.0ms)[0m  [1mBEGIN[0m
+D, [2016-10-27T18:12:01.706004 #83212] DEBUG -- :   [1m[35m (147.1ms)[0m  DROP TABLE "bookmarks"
+D, [2016-10-27T18:12:02.125892 #83212] DEBUG -- :   [1m[36mSQL (138.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20161026121548"]]
+D, [2016-10-27T18:12:02.275835 #83212] DEBUG -- :   [1m[35m (149.8ms)[0m  COMMIT
+D, [2016-10-27T18:12:09.188262 #83217] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (141.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2016-10-27T18:12:09.337384 #83217]  INFO -- : Migrating to CreateBookmarks (20161026121548)
+D, [2016-10-27T18:12:09.467669 #83217] DEBUG -- :   [1m[35m (129.8ms)[0m  BEGIN
+D, [2016-10-27T18:12:09.615672 #83217] DEBUG -- :   [1m[36m (147.0ms)[0m  [1mCREATE TABLE "bookmarks" ("id" serial primary key, "name" character varying, "url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+D, [2016-10-27T18:12:10.313886 #83217] DEBUG -- :   [1m[35mSQL (136.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20161026121548"]]
+D, [2016-10-27T18:12:10.465687 #83217] DEBUG -- :   [1m[36m (151.5ms)[0m  [1mCOMMIT[0m
